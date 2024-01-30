@@ -1,5 +1,5 @@
 'use strict'
-
+///this file creates a placeholder value for the database
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('bands', [{
