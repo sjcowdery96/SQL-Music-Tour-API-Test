@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+
+    /// these association methods are made to match data across tables
     static associate({ Stage, StageEvent, MeetGreet, SetTime }) {
       // stages
       Event.belongsToMany(Stage, {
@@ -16,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         as: "stages",
         through: StageEvent
       })
-      
+
       // meet and greets 
       Event.hasMany(MeetGreet, {
         foreignKey: "event_id",
@@ -30,6 +32,8 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
   }
+
+  /// initializes the model with all key value pairs
   Event.init({
     event_id: {
       type: DataTypes.INTEGER,

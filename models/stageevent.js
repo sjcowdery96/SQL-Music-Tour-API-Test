@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
+
+  /// initializes the model with all key value pairs
   StageEvent.init({
     stage_events_id: {
       type: DataTypes.INTEGER,

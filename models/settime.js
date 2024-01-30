@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+
+    /// these association methods are made to match data across tables
     static associate({ Band, Event, Stage }) {
       // band
       SetTime.belongsTo(Band, {
@@ -31,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   SetTime.init({
     set_time_id: {
-      type: DataTypes.INTEGER, 
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },

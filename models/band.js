@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+
+    /// these association methods are made to match data across tables
     static associate({ MeetGreet, SetTime }) {
       // meet and greets
       Band.hasMany(MeetGreet, {
@@ -23,6 +25,8 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
   }
+
+  /// initializes the model with all key value pairs
   Band.init({
     band_id: {
       type: DataTypes.INTEGER,
@@ -30,20 +34,20 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     genre: {
-        type: DataTypes.TEXT,
-        allowNull: false
+      type: DataTypes.TEXT,
+      allowNull: false
     },
     available_start_time: {
-        type: DataTypes.DATE,
-        allowNull: false
+      type: DataTypes.DATE,
+      allowNull: false
     },
     end_time: {
-        type: DataTypes.DATE,
-        allowNull: false
+      type: DataTypes.DATE,
+      allowNull: false
     }
   }, {
     sequelize,
