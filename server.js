@@ -2,9 +2,9 @@
 /// brings in the necessary node modules and packages required to run the app
 const express = require('express')
 const app = express()
-///sequelize is used to mediate between the SQL database and javascript
-///it also will generate migration files for each model so data translates properly
-const { Sequelize } = require('sequelize')
+
+///sequelize is not used here, but is used in index.js
+/// --> const { Sequelize } = require('sequelize')
 
 ///the controlerfile below is unnecessary as it is defined and used later
 /// --> const bands = require('./controllers/bands_controller')
