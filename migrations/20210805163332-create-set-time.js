@@ -1,5 +1,6 @@
 'use strict'
 module.exports = {
+  /// this migration covers the set_times column
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('set_times', {
       set_time_id: {

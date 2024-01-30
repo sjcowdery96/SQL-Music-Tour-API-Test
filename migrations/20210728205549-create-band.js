@@ -1,8 +1,9 @@
 'use strict'
 module.exports = {
+  /// this migration covers the bands column
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('bands', {
-        band_id: {
+      band_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,

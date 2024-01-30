@@ -1,5 +1,6 @@
 'use strict'
 module.exports = {
+  /// this migration covers the stage_events column
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('stage_events', {
       stage_events_id: {

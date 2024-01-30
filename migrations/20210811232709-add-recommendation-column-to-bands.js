@@ -1,6 +1,6 @@
 'use strict'
 const { DataTypes } = require('sequelize')
-
+/// this migration covers the recommendation column
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.addColumn('bands', 'recommendation', {
